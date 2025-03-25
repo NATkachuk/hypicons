@@ -1,0 +1,46 @@
+@use "../../../Scss/mixin";
+@use "../../../Scss/reset";
+@use "../../../Scss/vars";
+
+.section1{
+    @include mixin.Flex(column,center,center,108px);
+    background-color: vars.$background-color;
+    padding: 74px 98px;
+
+    &-container1{
+        @include mixin.Flex(column,flex-start,center,58px);
+        .section1-textbox{
+            @include mixin.Flex(column,flex-start,center,14px);
+            &__text{
+                @include mixin.Manrope(16px,400,25px);
+                color: vars.$text-color;
+            }
+            &__title{
+                @include mixin.Manrope(48px,400,62px);
+                color: vars.$text-color;
+                text-align: center;
+            }
+        }
+        &__btn{
+            @include mixin.Manrope(16px,400,25px);
+            color: vars.$text-color;
+            background-color: vars.$button-color;
+            padding: 15px 42px;
+            border-radius: 200px;
+        }
+    }
+    &-container2{
+        @include mixin.Flex(row,flex-start,flex-start,58px);
+        .section1-box{
+            @include mixin.Flex(column,flex-start,flex-start,14px);
+            &__text1{
+                @include mixin.Manrope(16px,400,25px);
+                color: vars.$text-color;
+            }
+            &__text2{
+                @include mixin.Manrope(16px,400,30px);
+                color: vars.$text-color;
+            }
+        }
+    }
+}
