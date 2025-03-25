@@ -1,0 +1,26 @@
+@use "../../Scss/mixin";
+@use "../../Scss/reset";
+@use "../../Scss/vars";
+
+.header{
+    @include mixin.Flex(row,space-between,center,0);
+    background-color: vars.$background-color;
+    padding: 29px 40px;
+
+    .nav{
+        &__list{
+            @include mixin.Flex(row,center,center,40px);
+        }
+        &__link{
+            @include mixin.IBM(13px,400,14px);
+            color: vars.$text-color;
+        }
+    }
+    &__btn{
+        @include mixin.IBM(13px,400,14px);
+        color: vars.$text-color;
+        background-color: vars.$button-color;
+        padding: 4px 18px;
+        border-radius: 200px;
+    }
+}
