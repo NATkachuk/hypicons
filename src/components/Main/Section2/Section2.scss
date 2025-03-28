@@ -1,0 +1,30 @@
+@use "../../../Scss/mixin";
+@use "../../../Scss/reset";
+@use "../../../Scss/vars";
+
+
+.section2{
+    @include mixin.Flex(row,space-between,center,0);
+    padding: 100px 112px;
+    background-color: vars.$background-color;
+    &-container{
+        @include mixin.Flex(column,flex-start,flex-start,55px);
+        .section2-textbox{
+            @include mixin.Flex(column,flex-start,flex-start,25px);
+            color: vars.$text-color;
+            &__title{
+                @include mixin.Manrope(48px,400,62px);
+            }
+            &__text{
+                @include mixin.Manrope(15px,400,30px);
+            }
+        }
+        &__btn{
+            @include mixin.IBM(13px,400,20px);
+            background-color: vars.$button-color;
+            color: vars.$text-color;
+            padding: 15px 42px;
+            border-radius: 200px;
+        }
+    }
+}
