@@ -1,0 +1,22 @@
+@use "../../Scss/mixin";
+@use "../../Scss/reset";
+@use "../../Scss/vars";
+
+.footer{
+    padding-top: 90px;
+    &-container{
+        @include mixin.Flex(column,center,center,30px);
+        &__text{
+            @include mixin.Manrope(16px,400,30px);
+            color: vars.$text-color;
+            &--bold{
+                @include mixin.Manrope(16px,400,30px);
+                color: vars.$button-color;
+            }
+        }
+        &__text2{
+            @include mixin.Manrope(11px,400,30px);
+            color: vars.$text-color;
+        }
+    }
+}
