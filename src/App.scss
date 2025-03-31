@@ -1,2 +1,11 @@
+@use './Scss/mixin';
+@use './Scss/reset';
+@use './Scss/vars';
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+
+
+body {
+    background-color: vars.$background-color;
+}
