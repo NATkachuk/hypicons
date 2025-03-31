@@ -1,18 +1,20 @@
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.scss'
-import Footer from './components/Footer/Footer'
-import Header from './components/Header/Header'
-import Main from './components/Main/Main'
+import Layout from './Pages/Layout/Layout'
+import SignUp from './Pages/SignUp/SignUp'
+import SignIn from './Pages/SignIn/SignIn'
 
 function App() {
  
 
   return (
-    <>
-     <Header/>
-     <Main/>
-     <Footer/>
-    </>
+   <BrowserRouter basename='/hypicons'>
+      <Routes>
+        <Route path="/" element={<Layout />} />
+        <Route path='SignUp' element={<SignUp/>} />
+        <Route path='SignIn' element={<SignIn/>} />
+      </Routes>
+   </BrowserRouter>
   )
 }
 

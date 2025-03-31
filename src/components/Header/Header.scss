@@ -16,11 +16,16 @@
             color: vars.$text-color;
         }
     }
+    &-btns {
+        @include mixin.Flex(row,center,center,20px);
+    }
     &__btn{
         @include mixin.IBM(13px,400,14px);
-        color: vars.$text-color;
         background-color: vars.$button-color;
         padding: 4px 18px;
         border-radius: 200px;
+        &-link {
+            color: vars.$text-color;
+        }
     }
 }
